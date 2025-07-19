@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="format-detection" content="address=no">
+    <title>
+        Вопрос 18
+    </title>
+    <link href="styles/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Вопрос №18</h1>
+        <h2>КРАСОТА МУЗЫКИ</h2>
+        <p><br>
+            В начале XX века, в тихих улочках Овьедо, родилась девочка, которая слышала музыку даже в шуме дождя по черепичной крыше.
+        
+        <p>
+            С раннего возраста она обожала музыку, вдохновлялась природой Астурии, народными песнями и легендами.<br><br>
+
+            Во время Гражданской войны покинула Испанию и уехала в Мексику, где прожила почти всю жизнь. Там она продолжала сочинять — в её партитурах звучали и горы, и туманы, и даже сидр.
+
+            Её симфонии и балеты объединяли фольклор, классику и личную силу характера.<br><br>
+            <em>В одной из её самых известных симфоний — чётко слышна Астурия,</em> пусть даже она далеко от дома.
+
+            Сегодня её имя всё чаще появляется на афишах концертов, а её музыка — в залах по обе стороны океана.
+        </p>
+        <div class="container">
+            Она — пример сильной женщины, которая творила в мире, где почти все композиторы были мужчинами.<br>
+            <p class="centered">
+                <video width="400" controls>
+                    <source src="../images/music1.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает видео.
+                </video>
+                <br>
+                <a href="../images/Rout.mp4" target="_blank" class="question-button">Открыть в новом окне</a>
+            </p>
+        </div>
+
+        <p>
+            <strong>
+                Для ответа надо:
+            </strong>
+            <br>
+            Сделать фото с названием места.
+        </p>
+    </div>
+    <div class="navigation-buttons">
+        <a id="backButton" class="question-button">Назад</a>
+        <a id="nextButton" class="question-button">Вперед</a>
+    </div>
+
+    <script>
+        // Определяем текущий номер страницы из URL
+        const path = window.location.pathname;
+        const match = path.match(/question_(\d+)\.html$/);
+
+        if (match) {
+            const current = parseInt(match[1], 10);
+            const prev = current - 1;
+            const next = current + 1;
+
+            const backButton = document.getElementById("backButton");
+            const nextButton = document.getElementById("nextButton");
+
+            // Назад
+            if (prev >= 1) {
+                backButton.href = `question_${prev}.html`;
+            } else {
+                backButton.style.display = "none";
+            }
+
+            // Вперед
+            if (next <= 20) { // Укажи здесь макс. номер
+                nextButton.href = `question_${next}.html`;
+            } else {
+                nextButton.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

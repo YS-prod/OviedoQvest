@@ -49,6 +49,14 @@ h3 {
   font-size: 1.5rem;
 }
 
+h4 {
+  font-family: 'Montserrat', sans-serif;
+  color: #ffcc00;
+  text-align: left;
+  margin-top: 1.2em;
+  font-size: 1.5rem;
+}
+
 p {
   font-size: 1.1em;
   line-height: 1.6em;

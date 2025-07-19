@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="format-detection" content="address=no">
+    <title>
+        Вопрос 14
+    </title>
+    <link href="styles/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Вопрос №14</h1>
+        <h2>ВЕРШИНА МИРА</h2><br>
+            <p class="centered">
+            Высоко-высоко, далеко-далеко —<br>
+            там, где не ступала нога обычного смертного,<br>
+            возвышается <pm2>Джомолунгма</pm2> — царица мира,<br>
+            что смотрит на землю с высоты <pm2>8848 м</pm2>.<br><br>
+
+            Есть и другая — на острове пламени и ветров:<br>
+            <pm2>Тейде</pm2>, вулкан над облаками,<br>
+            <pm2>3718 м</pm2> — и нет в Испании вершины выше.<br><br>
+
+            А здесь, у нас, в сердце Астурии,<br>
+            стоит каменная гордость — <pm2>Торре-де-Серредо</pm2>,<br>
+            <pm2>2648 м</pm2> чистого упрямства,<br>
+            над ней только звёзды и вечный астурийский ветер.<br><br>
+
+            Но есть тот, кто выше их всех — не ростом, а судьбой.<br>
+            <em>Он живёт веками, сражается и всегда помнит:<br>
+            🗡 «Останется только один!»</em><br><br>
+            </p>
+
+        <div class="container">
+            <h3>Кто же он?</h3>
+        </div>
+        <p>
+            <strong>
+            Для ответа надо:
+            </strong>
+            <br>
+            Сделать фото с названием.
+        </p>
+    </div>
+    <div class="navigation-buttons">
+        <a id="backButton" class="question-button">Назад</a>
+        <a id="nextButton" class="question-button">Вперед</a>
+    </div>
+
+    <script>
+        // Определяем текущий номер страницы из URL
+        const path = window.location.pathname;
+        const match = path.match(/question_(\d+)\.html$/);
+
+        if (match) {
+            const current = parseInt(match[1], 10);
+            const prev = current - 1;
+            const next = current + 1;
+
+            const backButton = document.getElementById("backButton");
+            const nextButton = document.getElementById("nextButton");
+
+            // Назад
+            if (prev >= 1) {
+                backButton.href = `question_${prev}.html`;
+            } else {
+                backButton.style.display = "none";
+            }
+
+            // Вперед
+            if (next <= 20) { // Укажи здесь макс. номер
+                nextButton.href = `question_${next}.html`;
+            } else {
+                nextButton.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

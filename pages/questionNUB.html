@@ -11,8 +11,7 @@
 
 <body>
   <div class="container">
-    <h1>Вопрос №4</h1>
-    <h2>MINISTERIO DE TRABAJO</h2>
+    <h1>Вопрос: СОЦИАЛЬНОЕ ЖИЛЬЕ</h1>
     <p>
       В Испании по инициативе Ministerio de Trabajo (Министерства труда) с 1953 года начали строить дома для
       малообеспеченных семей с дешёвой арендой.<br><br>
@@ -43,34 +42,6 @@
     <a id="nextButton" class="question-button">Вперед</a>
   </div>
 
-  <script>
-    // Определяем текущий номер страницы из URL
-    const path = window.location.pathname;
-    const match = path.match(/question_(\d+)\.html$/);
-
-    if (match) {
-      const current = parseInt(match[1], 10);
-      const prev = current - 1;
-      const next = current + 1;
-
-      const backButton = document.getElementById("backButton");
-      const nextButton = document.getElementById("nextButton");
-
-      // Назад
-      if (prev >= 1) {
-        backButton.href = `question_${prev}.html`;
-      } else {
-        backButton.style.display = "none";
-      }
-
-      // Вперед
-      if (next <= 20) { // Укажи здесь макс. номер
-        nextButton.href = `question_${next}.html`;
-      } else {
-        nextButton.style.display = "none";
-      }
-    }
-  </script>
 </body>
 
 </html>

@@ -13,9 +13,8 @@
 
 <body>
     <div class="container">
-        <h1>Вопрос №13</h1>
-        <h2>РАДИОВОЛНА FM</h2>
-        <p><br>
+        <h1>Вопрос: РАДИОВОЛНА FM</h1>
+        <p>
             Весной этого года во всей Испании произошло аварийное отключение электричества - такие ситуации называются
             <em>“блэкаут”</em>. Не было ни интернета, ни телевидения и единственным способом узнавать новости было радио.<br><br>
 
@@ -46,34 +45,6 @@
         <a id="nextButton" class="question-button">Вперед</a>
     </div>
 
-    <script>
-        // Определяем текущий номер страницы из URL
-        const path = window.location.pathname;
-        const match = path.match(/question_(\d+)\.html$/);
-
-        if (match) {
-            const current = parseInt(match[1], 10);
-            const prev = current - 1;
-            const next = current + 1;
-
-            const backButton = document.getElementById("backButton");
-            const nextButton = document.getElementById("nextButton");
-
-            // Назад
-            if (prev >= 1) {
-                backButton.href = `question_${prev}.html`;
-            } else {
-                backButton.style.display = "none";
-            }
-
-            // Вперед
-            if (next <= 20) { // Укажи здесь макс. номер
-                nextButton.href = `question_${next}.html`;
-            } else {
-                nextButton.style.display = "none";
-            }
-        }
-    </script>
 </body>
 
 </html>

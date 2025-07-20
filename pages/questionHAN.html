@@ -13,13 +13,8 @@
 
 <body>
     <div class="container">
-        <h1>
-            Вопрос №16
-        </h1>
-        <h2>
-            КЛАССИКА МУЖСКОГО СТИЛЯ
-        </h2>
-        <p><br>
+        <h1>Вопрос: КЛАССИКА МУЖСКОГО СТИЛЯ</h1>
+        <p>
             Без какого элемента гардероба нельзя представить классического испанского сеньора? 
         <div class="container">
         <p class="centered">
@@ -66,34 +61,6 @@
         <a id="nextButton" class="question-button">Вперед</a>
     </div>
 
-    <script>
-        // Определяем текущий номер страницы из URL
-        const path = window.location.pathname;
-        const match = path.match(/question_(\d+)\.html$/);
-
-        if (match) {
-            const current = parseInt(match[1], 10);
-            const prev = current - 1;
-            const next = current + 1;
-
-            const backButton = document.getElementById("backButton");
-            const nextButton = document.getElementById("nextButton");
-
-            // Назад
-            if (prev >= 1) {
-                backButton.href = `question_${prev}.html`;
-            } else {
-                backButton.style.display = "none";
-            }
-
-            // Вперед
-            if (next <= 20) { // Укажи здесь макс. номер
-                nextButton.href = `question_${next}.html`;
-            } else {
-                nextButton.style.display = "none";
-            }
-        }
-    </script>
 </body>
 
 </html>
